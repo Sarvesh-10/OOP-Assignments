@@ -41,7 +41,7 @@ public void Subtract(Complex C)
 {
     double RealPart,ImgPart;//Local variable Not to confuse with attributes real img
     RealPart = this.real - C.real;
-    ImgPart = this.real - C.real;
+    ImgPart = this.img - C.img;
     if(ImgPart<0)
     {
         System.out.println(RealPart+""+ImgPart+"i");
@@ -136,6 +136,9 @@ public void Division(Complex C)
      * C2 = c + di
      * Ans = C1/C2 = (a+bi)/(c+di)
      * In Ans Multiplying Numerator and Denominator with conjugate of C2
+     * Ans = C1*(Conjugate of C2)/C2*Conjugate(C2);
+     * C2*Conjugate(C2) = |C2| (modulus of C2)
+     * Equation:-
      * 
      *Ans = (ac+bd)/(c^2 + d^2) + i(bc - ad)/(c^2 + d^2)
      * 
